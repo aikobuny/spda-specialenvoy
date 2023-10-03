@@ -77,6 +77,8 @@ function totalhit() {
     text = text.replace(/{/g, "");
     text = text.replace(/"/g, "");
     text = text.replace(/}/g, "");
+    text = text.replace(/n:/g, "");
+    text = text.replace(/\n/g, "");
     document.getElementById("totalhit").innerHTML = `Visitors: ${xhr.responseText}`;
 	}
 	xhr.open('GET', 'https://spda-api.aikobuny.repl.co/add', true);
