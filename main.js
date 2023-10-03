@@ -74,12 +74,7 @@ function totalhit() {
   var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() {
     let text = xhr.responseText;
-    text = text.replace(/{/g, "");
-    text = text.replace(/"/g, "");
-    text = text.replace(/}/g, "");
-    text = text.replace(/n:/g, "");
-    text = text.replace(/\n/g, "");
-    document.getElementById("totalhit").innerHTML = `Visitors: ${xhr.responseText}`;
+    document.getElementById("totalhit").innerHTML = `Visitors: ${JSON.parse(text)['n']}`;
 	}
 	xhr.open('GET', 'https://spda-api.aikobuny.repl.co/add', true);
 	xhr.send(null);
