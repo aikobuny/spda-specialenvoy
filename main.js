@@ -75,7 +75,7 @@ function totalhit() {
 	xhr.onreadystatechange = function() {
     document.getElementById("totalhit").innerHTML = `Visitors: ${xhr.responseText}`;
 	}
-	xhr.open('GET', 'https://spda-specialenvoy.org/totalhit', true);
+	xhr.open('GET', 'https://spda-api.aikobuny.repl.co/add', true);
 	xhr.send(null);
 }
 
