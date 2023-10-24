@@ -88,6 +88,45 @@ function winLoad(callback) {
   }
 }
 
+function getURLParam(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+function sendMessage(url)
+{
+    let name = getURLParam('name');
+    let email = getURLParam('email');
+    let phone = getURLParam('phone');
+    let message = getURLParam('message');
+
+    let output = 
+`
+**Name:** \`${name}\`
+**Email:** \`${email}\`
+**Phone:** \`${phone}\`
+**Message:**
+\`\`\`${message}\`\`\`
+`
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://discord.com/api/webhooks/1166254272023904297/svFDVLi3NU-kwBTEF8UZcmjD-wgN1Gi3XAEc1gxz6DomFZ_cu5NetQbHnbUX_t2J4yAX", true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({
+        'content': output,
+        'username':'SPDA-SpecialEnvoy',
+    }));
+}
+
 winLoad(function() {
   flash();
   totalhit();
