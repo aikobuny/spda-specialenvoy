@@ -116,15 +116,16 @@ function sendMessage(url)
 **Phone:** \`${phone}\`
 **Message:**
 \`\`\`${message}\`\`\`
-`
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://discord.com/api/webhooks/1166254272023904297/svFDVLi3NU-kwBTEF8UZcmjD-wgN1Gi3XAEc1gxz6DomFZ_cu5NetQbHnbUX_t2J4yAX", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify({
+`;
+    if (name != undefined) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://discord.com/api/webhooks/1166254272023904297/svFDVLi3NU-kwBTEF8UZcmjD-wgN1Gi3XAEc1gxz6DomFZ_cu5NetQbHnbUX_t2J4yAX", true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify({
         'content': output,
         'username':'SPDA-SpecialEnvoy',
-    }));
+      }));
+    }
 }
 
 winLoad(function() {
