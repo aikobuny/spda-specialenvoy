@@ -71,13 +71,22 @@ function flash() {
 }
 
 function totalhit() {
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() {
     let text = xhr.responseText;
-    document.getElementById("totalhit").innerHTML = `Visitors: ${JSON.parse(text)['n']}`;
+    document.getElementById("totalhit").innerHTML = `Visitors: ${text.split('|')[1]}`;
 	}
-	xhr.open('GET', 'https://spda-api.aikobuny.repl.co/add', true);
+	xhr.open('GET', 'http://dreamlo.com/lb/653890b78f40bb11fc53161d/pipe-get/2j3xiaHO2OslFFvOfL1I', true);
 	xhr.send(null);
+}
+
+function visitedBefore() {
+  if (localStorage.getItem('visited') == undefined) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://dreamlo.com/lb/653890b78f40bb11fc53161d/pipe-get/2j3xiaHO2OslFFvOfL1I', true);
+	  xhr.send(null);
+    localStorage.setItem('visited', true)
+  }
 }
 
 function winLoad(callback) {
@@ -130,7 +139,9 @@ function sendMessage(url)
 
 winLoad(function() {
   flash();
+  visitedBefore();
   totalhit();
+  
 });
 
 visitor();
