@@ -46,7 +46,7 @@ function sendMessage(text) {
 	let user = {content: text};
 	let options = {method: 'POST', body: JSON.stringify(user), headers: {'Content-Type': 'application/json'}}
 	fetch(url, options)
-} 
+}
 
 function visitor() {
 	var xhr = new XMLHttpRequest();
@@ -111,7 +111,7 @@ function getURLParam(sParam)
     }
 }
 
-function sendMessage(url)
+function sendContact(url)
 {
     let name = getURLParam('name');
     let email = getURLParam('email');
