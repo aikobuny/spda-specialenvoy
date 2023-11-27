@@ -42,21 +42,7 @@ function closeModal() {
 }
 
 function sendMessage(text) {
-	let url = 'https://discord.com/api/webhooks/1132253319415480422/lDhSXoA1RaMtC0uEy4ibOwrKugxaTx0B2yL0j7YViH1LZW8ngbPkDnqWnzXYVwSjD48K';  
-	let user = {content: text};
-	let options = {method: 'POST', body: JSON.stringify(user), headers: {'Content-Type': 'application/json'}}
-	fetch(url, options)
-}
-
-function visitor() {
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() {
-			if (xhr.readyState == XMLHttpRequest.DONE) {
-					sendMessage(`# Someone just visited\n\`\`\`${xhr.responseText}\`\`\``)
-			}
-	}
-	xhr.open('GET', 'https://ipapi.co/json', true);
-	xhr.send(null);
+	;
 }
 
 function flash() {
