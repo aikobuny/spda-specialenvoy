@@ -62,14 +62,14 @@ function totalhit() {
     let text = xhr.responseText;
     document.getElementById("totalhit").innerHTML = `Visitors: ${text.split('|')[1]}`;
 	}
-	xhr.open('GET', 'https://dreamlo.com/lb/653890b78f40bb11fc53161d/pipe-get/2j3xiaHO2OslFFvOfL1I', true);
+	xhr.open('GET', 'http://dreamlo.com/lb/653890b78f40bb11fc53161d/pipe-get/2j3xiaHO2OslFFvOfL1I', true);
 	xhr.send(null);
 }
 
 function visitedBefore() {
   if (localStorage.getItem('visited') == undefined) {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://dreamlo.com/lb/653890b78f40bb11fc53161d/pipe-get/2j3xiaHO2OslFFvOfL1I', true);
+    xhr.open('GET', 'http://dreamlo.com/lb/653890b78f40bb11fc53161d/pipe-get/2j3xiaHO2OslFFvOfL1I', true);
 	  xhr.send(null);
     localStorage.setItem('visited', true)
   }
