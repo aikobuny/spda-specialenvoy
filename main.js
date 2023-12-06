@@ -128,5 +128,3 @@ winLoad(function() {
   visitedBefore();
   totalhit();
 });
-
-visitor();
