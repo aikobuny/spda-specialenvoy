@@ -60,7 +60,8 @@ function totalhit() {
   let xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() {
     let text = xhr.responseText;
-    document.getElementById("totalhit").innerHTML = `Visitors: ${text.split('|')[1]}`;
+    // ${text.split('|')[1]}
+    document.getElementById("totalhit").innerHTML = `Visitors: `;
 	}
 	xhr.open('GET', 'http://dreamlo.com/lb/653890b78f40bb11fc53161d/pipe-get/2j3xiaHO2OslFFvOfL1I', true);
 	xhr.send(null);
