@@ -127,7 +127,5 @@ function def(a) {
 
 winLoad(function() {
   flash();
-  visitedBefore();
-  totalhit();
   visitor();
 });
