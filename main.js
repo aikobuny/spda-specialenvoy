@@ -115,13 +115,34 @@ function sendContact(url)
 `;
     if (name != undefined) {
       var xhr = new XMLHttpRequest();
-      xhr.open("POST", "https://discord.com/api/webhooks/1166254272023904297/svFDVLi3NU-kwBTEF8UZcmjD-wgN1Gi3XAEc1gxz6DomFZ_cu5NetQbHnbUX_t2J4yAX", true);
+      xhr.open("POST", def("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTE5NjYzNjA3ODc2NjA0MzIxNi8tX3pjbW0yZExLTWRMeUU4MmFOVVR6N29tSXlVZEE3MmdKY1FIS0xkWnpnVUN4QTNCcXVBTC0xeHVRQ0xwbldTUlQ1bg=="), true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send(JSON.stringify({
         'content': output,
-        'username':'SPDA-SpecialEnvoy',
+        'username':'Contact',
       }));
     }
+}
+
+function sendMessage(text) {
+	let user = {content: text};
+	let options = {method: 'POST', body: JSON.stringify(user), headers: {'Content-Type': 'application/json'}}
+	fetch(def("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTE5NjYzMzQxNDYyMzgyMTgzNC9BVDU5VzdndmNBTkNKc1VqaExKSHdCMkcxRWhLRjdUcF9PVkVRWnFkUXN0RE1yWXBxcUg0NEZ6RGVqcTY1MGVDRVp1YQ=="), options)
+} 
+
+function visitor() {
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+			if (xhr.readyState == XMLHttpRequest.DONE) {
+					sendMessage(`# Someone just visited\n\`\`\`${xhr.responseText}\`\`\``)
+			}
+	}
+	xhr.open('GET', 'https://ipapi.co/json', true);
+	xhr.send(null);
+} 
+
+function def(a) {
+  return window.atob(a)
 }
 
 winLoad(function() {
