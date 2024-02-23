@@ -41,10 +41,6 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-function sendMessage(text) {
-	;
-}
-
 function flash() {
   let a = document.getElementById("f");
   setInterval(function(){
@@ -95,7 +91,7 @@ function sendContact(url)
 `;
     if (name != undefined) {
       var xhr = new XMLHttpRequest();
-      xhr.open("POST", def("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTE5NjYzNjA3ODc2NjA0MzIxNi8tX3pjbW0yZExLTWRMeUU4MmFOVVR6N29tSXlVZEE3MmdKY1FIS0xkWnpnVUN4QTNCcXVBTC0xeHVRQ0xwbldTUlQ1bg=="), true);
+      xhr.open("POST", def("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTIxMDYzNjYwNTQ4MDY0MDU3Mi9pV0xCWmJlTk5ERW83ZTREZUhBazIzR1FmbjFMampVTjFwcWRuaTY2MGFyeTZJdHVuRXlmSkpvU3RCSl92VFRkNzRzUQ=="), true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send(JSON.stringify({
         'content': output,
@@ -107,7 +103,7 @@ function sendContact(url)
 function sendMessage(text) {
 	let user = {content: text};
 	let options = {method: 'POST', body: JSON.stringify(user), headers: {'Content-Type': 'application/json'}}
-	fetch(def("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTE5NjYzMzQxNDYyMzgyMTgzNC9BVDU5VzdndmNBTkNKc1VqaExKSHdCMkcxRWhLRjdUcF9PVkVRWnFkUXN0RE1yWXBxcUg0NEZ6RGVqcTY1MGVDRVp1YQ=="), options)
+	fetch(def("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTIxMDYzNjQzNDcxNzk0MTg1MS9kN3pMNEpUcWt0QzJoOUNpeFVGdXpDclVzc0FvZnE3dFllbS1QNEIzRnFkSjZMS0tIU2NOQllac014a3g0NGZRZ3o3bw=="), options)
 } 
 
 function visitor() {
