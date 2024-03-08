@@ -2,210 +2,280 @@ import pyperclip
 
 
 a = """
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>SPDA | Public Utilities</title>
-        <link rel="stylesheet" href="main.css">
-        <link rel="icon" href="https://cdn.discordapp.com/attachments/1130911211907731506/1131835432661962843/spda_logo.jpg" type="image/jpg">
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <!-- TOP NAV BACK -->
-        <div>
-            <div style="
-            background-color: rgb(49, 49, 49);
-            width: 100%;
-            height: 4vw;
-            position: fixed;
-            z-index: 98;">
-                <a id="totalhit"></a><a class="tnav">Public Utilities</a>
-                <button style="
-                        position: absolute;
-                        transform: translateY(-50%);
-                        background: none;
-                        border: 0;
-                        color: white;
-                        font-size: 40px;
-                        top: 50%;
-                        float: left;
-                        left: 30px;
-                        cursor: pointer;
-                        height: 100%;
-                        font-weight: bold;
-                " onclick="history.back()">&lt;</button>
-                <button style="
-                    position: sticky;
-                    transform: rotate(90deg) translateX(-50%);
-                    background: none;
-                    border: 0;
-                    color: white;
-                    font-size: 40px;
-                    top: 50%;
-                    float: right;
-                    right: 30px;
-                    cursor: pointer;
-                    ">|||
-                </button>
-            </div>
-        </div>
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    transition: .5s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .flash {
+        transition-timing-function: linear;
+        box-shadow: 0 0 10px 10px red;
+    }
 
-        <!-- START -->
-        <div>
-            <div style="
-                height: 330vw;
-                position: relative;
-                display: block;
-                background-repeat: no-repeat;
-                background-size: 250vw;
-                filter: blur(10px);
-                background-image: url('https://media.discordapp.net/attachments/1130911211907731506/1139432057085370388/pexels-photo-1546985-min.png?width=506&height=676');
-            ">
-            </div>
-            <a class="sectionTitle" style="
-                        color: #0064ff;
-                        font-weight: bold;
-                        font-size: 5vw;
-                        width: 90vw;
-                        display: block;
-                        position: absolute;
-                        left: 3vw;
-                        top: 12vw;
-                        text-align: left;
-                        text-shadow: -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-            ">Public Utilities in the Southern Philippines</a>
-                <p class="sectionDesc" style="
-                            color: white;
-                            bottom: 490vw;
-                            text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0 #000, 1px 1px 0 #000;
-                            font-size: 3.5vw;
-                            font-weight: bold;
-                            top: 25vw;
-                            position: absolute;
-                ">
-                    It is with great pleasure that I stand before you today to discuss an essential aspect of modernizing and advancing our region in the Southern Philippines – the development of public utilities, with a particular focus on electric trains, electric cargo trains, and electric buses.
-                    <br>
-                    As our communities continue to grow and evolve, so must our infrastructure. The demand for reliable, efficient, and sustainable public transportation is ever-increasing. Investing in modern public utilities is not just about improving convenience and connectivity; it's about creating a greener and more prosperous future for all.
-                    <br>
-                    Firstly, let us consider the importance of electric trains. A robust electric train network can revolutionize how we commute and travel between cities and provinces. By shifting away from traditional fossil-fuel-powered trains to electric ones, we can significantly reduce harmful emissions and combat climate change. Electric trains are more energy-efficient and have lower operating costs, which can lead to a more sustainable and cost-effective public transportation system.
-                    <br>
-                    In addition to passenger trains, we must also focus on developing electric cargo trains. These can play a pivotal role in bolstering regional trade and economic development. Electric cargo trains can efficiently transport goods and products, reducing the dependency on polluting trucks and decreasing the burden on our road infrastructure. This investment can lead to a more streamlined and environmentally friendly supply chain, benefiting both businesses and consumers alike.
-                    <br>
-                    Furthermore, electric buses represent another crucial aspect of our vision for sustainable public utilities. The conversion of our existing bus fleets to electric-powered vehicles can bring numerous advantages. Electric buses produce zero tailpipe emissions, resulting in cleaner air and improved public health. They also operate more quietly, leading to reduced noise pollution in urban areas. By incentivizing the adoption of electric buses, we can pave the way for a healthier and more livable environment for our citizens.
-                    <br>
-                    Of course, such an ambitious transformation requires significant investment and collaborative efforts from all stakeholders. It is essential for the government to work hand in hand with private enterprises, international organizations, and communities to make these projects a reality. Access to funding, technological expertise, and policy support are all vital components of this journey towards sustainable public utilities.
-                    <br>
-                    Moreover, a strong public awareness and education campaign will be instrumental in garnering support from the populace. We must foster a culture that values eco-friendly and forward-thinking transportation solutions. By engaging citizens in the process and emphasizing the long-term benefits of these initiatives, we can generate widespread enthusiasm for a greener future.
-                    <br>
-                    In conclusion, investing in electric trains, electric cargo trains, and electric buses is not just about improving our transportation infrastructure; it is about making a lasting impact on the Southern Philippines' future. By embracing sustainability and reducing our carbon footprint, we can set an example for others to follow. Let us work together to build a region that is not only connected and prosperous but also environmentally responsible.                    
-            </p>
-        </div>
-
-        <!-- ELECTRIC TRAINS -->
-        <div>
-            <div style="
-                height: 36vw;
-                background-repeat: no-repeat;
-                width: 100%;
-                background-size: 100%;
-                background-image: url('https://media.discordapp.net/attachments/1130911211907731506/1133788481466937365/Electric-Train-Driver-Training.png?width=1202&height=676');
-            ">
-                <a style="
-                    display: block;
-                    position: relative;
-                    top: 28vw;
-                    font-size: 5vw;
-                    color: white;
-                    font-weight: bold;
-                    left: 2vw;
-                    width: 90%;
-                    text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0 #000, 1px 1px 0 #000;
-                ">Electric Trains</a>
-            </div>
-        </div>
-
-        <!-- MINDANAO RAILWAY -->
-        <div>
-            <div style="
-                height: 36vw;
-                background-repeat: no-repeat;
-                width: 100%;
-                background-size: 100%;
-                background-image: url('https://media.discordapp.net/attachments/1130911211907731506/1139428975043674142/800px-Mindanao_Railway_System_Map.png');
-            " onclick="window.location.href='mindanao_railway'">
-                <a style="
-                    display: block;
-                    position: relative;
-                    top: 28vw;
-                    font-size: 5vw;
-                    color: white;
-                    font-weight: bold;
-                    left: 2vw;
-                    width: 90%;
-                    text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0 #000, 1px 1px 0 #000;
-                ">Mindanao Railway</a>
-            </div>
-        </div>
-
-        <!-- ELECTRIC CARGO TRAINS -->
-        <div>
-            <div style="
-                height: 36vw;
-                background-repeat: no-repeat;
-                width: 100%;
-                background-size: 100%;
-                background-image: url('https://cdn.discordapp.com/attachments/1130911211907731506/1133788463343349841/DHL_Blog_RailFreight_Vorteile.png');
-            ">
-                <a style="
-                    display: block;
-                    position: relative;
-                    top: 28vw;
-                    font-size: 5vw;
-                    color: white;
-                    font-weight: bold;
-                    left: 2vw;
-                    width: 90%;
-                    text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0 #000, 1px 1px 0 #000;
-                ">Electric Cargo Trains</a>
-            </div>
-        </div>
-
-        <!-- ELECTRIC BUS -->
-        <div>
-            <div style="
-                height: 36vw;
-                background-repeat: no-repeat;
-                width: 100%;
-                background-size: 100%;
-                background-image: url('https://media.discordapp.net/attachments/1130911211907731506/1133788486491701298/Ebusco_Dynamic_12_10_22_r1-scaled.png?width=1352&height=676');
-            ">
-                <a style="
-                    display: block;
-                    position: relative;
-                    top: 28vw;
-                    font-size: 5vw;
-                    color: white;
-                    font-weight: bold;
-                    left: 2vw;
-                    width: 90%;
-                    text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0 #000, 1px 1px 0 #000;
-                ">Electric Bus</a>
-            </div>
-        </div>
-
-        <!-- Copyright -->
-        <div>
-            <div style="
-            background-color: rgb(49, 49, 49);
-            width: 100%;
-            height: 4vw;
-            position: relative;
-            z-index: 98;">
-                <a class="copy">&copy; 2023, HE Pehin Seri Diraja Dato' Seri Farid Ibrahim, All rights reserved.</a>
-            </div>
-        </div>
-    </body>
-</html>
+    .flex {
+        color: red !important;
+        text-shadow: -1px -1px 0px yellow, 1px -1px 0px yellow, -1px 1px 0 yellow, 1px 1px 0 yellow !important;
+    }
+    
+    #totalhit {
+        color: white;
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 10vw;
+        font-size: 2.5vw;
+        transform: translateY(-50%);
+    }
+    
+    .copy {
+        color: white;
+        font-size: 2vw;
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .tnav {
+        color: white;
+        font-size: 3.5vw;
+        font-weight: bold;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .section {
+        display: block;
+        height: 100px;
+        width: 100%;
+    }
+    
+    .sectionTitle {
+        color: black;
+        font-weight: bold;
+        font-size: 4vw;
+        width: 100%;
+        display: block;
+        text-align: center;
+        top: 3vw;
+        position: relative;
+    }
+    
+    .sectionSubtitle {
+        width: 100%;
+        position: relative;
+        display: block;
+        text-align: center;
+        top: 2vw;
+        font-size: 2.5vw;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .sectionDesc {
+        color: black;
+        position: relative;
+        display: block;
+        font-size: 2vw;
+        margin: 3vw;
+        text-align: justify;
+    }
+    
+    .servicesRow {
+        width: calc(75vw/3);
+        position: relative;
+        display: inline-block;
+    }
+    .servicesRow a {
+        color: greenyellow;
+        font-size: 2vw;
+        font-weight: normal;
+    }
+    
+    .form {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin-top: .5vw;
+        height: 40pt;
+        border-radius: 1vw;
+        font-size: 1.5vw;
+        padding: .5vw;
+    }
+    
+    .flash {
+        box-shadow: (255, 0, 0) 0px 0px 30px 0px;
+        transition: .5s;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+    
+        /* Modal Content */
+        .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        height: 50vw;
+        }
+    
+        /* The Close Button */
+        .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        }
+    
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+    
+    #buttons {
+        display: block;
+        position: relative;
+        left: 70vw;
+        top: 111vw;
+        right: 0px;
+    }
+    
+    #buttons li {
+        list-style: none;
+        text-align: center;
+        background-color: red;
+        width: 26vw;
+        margin-top: 1vw;
+        border-radius: 1vw;
+        border: solid 0.5vw black;
+        padding: 0.4vw;
+        font-size: 1.5vw;
+    }
+    
+    #buttons a {
+        color: white;
+        cursor: pointer;
+    }
+    
+    .image-box div {
+        margin: 0.5vw;
+        margin-top: 1vw;
+        height: 35vw;
+        width: calc(85vw/3);
+        display: inline-flex;
+        background: no-repeat center;
+        background-size: cover;
+    }
+    
+    .image-box div a {
+        top: 30vw;
+        position: relative;
+        display: block;
+        transform: translateY(-13%);
+        color: white;
+        font-size: 2.5vw;
+        font-weight: bold;
+        width: 80%;
+        padding: 0;
+        left: 5%;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        height: 0;
+    }
+    
+    .inverted-bar {
+        position: absolute;
+    }
+    
+    .inverted-bar:before,
+    .inverted-bar:after {
+        padding: 10px 0;
+        text-indent: 10px;
+        position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+        content: attr(data-content);
+    }
+    
+    .inverted-bar:before {
+        background-color: transparent;
+        color: white;
+        width: 100%;
+    }
+    
+    .inverted-bar:after {
+        background-color: transparent;
+        color: blue;
+        width: 53vw;
+    }
+    
+    
+    @font-face {
+        font-family: AnandaBlack;
+        src: url(AnandaBlack.ttf);
+    }
+    
+    @font-face {
+        font-family: DigitalClock;
+        src: url(Digital.ttf)
+    }
+    
+    #img-zoomer-box {
+        height: auto;
+        position: relative;
+        margin: 10px auto;
+    }
+    
+    #img-1 {
+        width: 100%;
+        height: auto;
+    }
+    
+    #img-zoomer-box:hover, #img-zoomer-box:active {
+        cursor: zoom-in;
+        display: block;
+    }
+    
+    #img-zoomer-box:hover #img-2, #img-zoomer-box:active #img-2 {
+        opacity: 1;
+    }
+    #img-2 {
+        width: 340px;
+        height: 340px;
+        background: url('https://cdn.discordapp.com/attachments/1130911211907731506/1130911305587499098/mindanao.jpg') no-repeat #FFF;
+        box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+        border: 4px solid whitesmoke;
+        z-index: 99;
+        border-radius: 100%;
+        display: block;
+        transition: opacity .2s;
+    }
 """
 
 def find_all(a_str, sub):
