@@ -122,5 +122,6 @@ function def(a) {
 }
 
 winLoad(function() {
+  includeHTML();
   visitor();
 });
