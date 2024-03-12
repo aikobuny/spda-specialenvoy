@@ -122,6 +122,5 @@ function def(a) {
 }
 
 winLoad(function() {
-  flash();
   visitor();
 });
