@@ -288,6 +288,10 @@ a:focus {
 
   .detail-box {
     color: $primary2;
+    background: black;
+    padding: 30px;
+    filter: opacity(0.5);
+    border-radius: 2vw;
 
     h1 {
       font-size: 3rem;
