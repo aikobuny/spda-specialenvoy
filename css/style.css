@@ -140,7 +140,7 @@ a:focus {
   transition: .3;
 }
 
-.header_section *:hover {
+.header_section:hover {
   padding: 15px 0;
   background-color: rgb(0, 0, 0);
   transition: .3;
@@ -282,6 +282,10 @@ a:focus {
 
 .slider_section .detail-box {
   color: #00204a;
+  background: black;
+  padding: 30px;
+  filter: opacity(0.5);
+  border-radius: 2vw;
 }
 
 .slider_section .detail-box h1 {
